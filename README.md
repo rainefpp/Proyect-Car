@@ -5,8 +5,8 @@
 Este repositorio usa el starter kit de lunar basado en laravel, para mas informacion visitar https://docs.lunarphp.io/core/starter-kits.html
 
 # Installation
+´´´bash
 
-composer install
 
 php artisan key:generate
 
@@ -19,6 +19,10 @@ php artisan db:seed
 php artisan storage:link
 
 php artisan serve
+
+´´´´
+
+
 
 ### Environment store
 
