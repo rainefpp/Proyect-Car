@@ -3,7 +3,7 @@
     <!-- Contenedor principal centrado -->
     <div class="d-flex text-center">
         <!-- Título -->
-        <h1 class="text-3xl font-extrabold sm:text-5xl">
+        <h1 class="text-3xl text-white font-bold sm:text-5xl">
             Encuentra el auto de tus sueños en Carzone
         </h1>
 
@@ -19,7 +19,7 @@
 
         <!-- Botón -->
         <div class="flex flex-wrap justify-center gap-4 mt-8">
-            <a class="block w-full px-12 py-3 font-medium text-white bg-indigo-600 rounded shadow sm:w-auto hover:bg-indigo-700 focus:outline-none focus:ring" href="">
+            <a class="block px-12 py-3 font-medium text-white rounded shadow sm:w-auto" style="background: #FFA74D;" href="">
                 Compra aquí
             </a>
         </div>
