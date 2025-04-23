@@ -3,24 +3,11 @@
 
 <head>
     <meta charset="utf-8">
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1"
-    >
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Carzone Lunar</title>
-    <meta
-        name="description"
-        content="Example of an ecommerce storefront built with Lunar."
-    >
-    <link
-        href="{{ asset('css/app.css') }}"
-        rel="stylesheet"
-    >
-
-    <link
-        rel="icon"
-        href="{{ asset('favicon.svg') }}"
-    >
+    <meta name="description" content="Example of an ecommerce storefront built with Lunar.">
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link rel="icon" href="{{ asset('favicon.svg') }}">
     @vite(['resources/css/custom.css'])
     @livewireStyles
 </head>

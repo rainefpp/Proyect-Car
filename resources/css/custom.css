@@ -1,8 +1,64 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
-.cuadro{
-    @apply w-80 bg-yellow-700 !important;
+/* Componente -> info-shop-home */
+.section-titulo {
+    color: #000;
+    text-align: center;
+    /* H2/Bold */
+    font-family: Inter;
+    font-size: 39.81px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 1.5rem;
+}
+.cuadro {
+    width: 250px;
+    height: 388px;
+    padding: 32px 5px;
+    border-radius: 8px;
+    border-bottom: 8px solid #365569;
+    background-color: #efeff0;
+}
+.cuadro img{
+    display: inline;
+    margin-bottom: 1.5rem;
+}
+.cuadro-titulo {
+    align-self: stretch;
+    color: #000;
+    text-align: center;
+    /* Paragraph 01/Bold */
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.cuadro-text {
+    align-self: stretch;
+    color: #000;
+    text-align: center;
+    /* Paragraph 01/Regular */
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+/* sm: en tailwind*/
+@media (min-width: 640px) {
+
+}
+/* md: en tailwind*/
+@media (min-width: 768px) {
+
+}
+/* lg: en tailwind*/
+@media (min-width: 1024px) {
+
+}
+/* xl: en tailwind*/
+@media (min-width: 1280px) {
 
 }
