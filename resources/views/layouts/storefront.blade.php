@@ -21,6 +21,7 @@
         rel="icon"
         href="{{ asset('favicon.svg') }}"
     >
+    @vite(['resources/css/custom.css'])
     @livewireStyles
 </head>
 

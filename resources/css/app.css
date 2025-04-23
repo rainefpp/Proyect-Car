@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import 'custom.css';
+
 @layer components {
     .no-spinner {
         @apply [-moz-appearance:_textfield];
@@ -16,5 +18,6 @@
 [x-cloak] {
     display: none;
 }
+
 
 

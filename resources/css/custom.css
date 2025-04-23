@@ -1,6 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 .cuadro{
-    width: 247px;
-    height: 388px;
-    background-color: aqua;
+    @apply w-80 bg-yellow-700 !important;
+
 }
