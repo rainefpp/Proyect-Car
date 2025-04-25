@@ -1,12 +1,12 @@
-<section class="font-sans" style="background-color: #DFE0E0;;height:600px;padding:22px;">
+<section class="font-sans section-info">
     <!-- Contenedor principal centrado -->
     <div class="text-center">
         <!-- Título -->
-        <h1 class="section-titulo">
+        <h1 class="section-titulo mb-4">
             Cómo comprar en Carzone?
         </h1>
         <!-- Contenedor de elementos -->
-        <div class="grid grid-cols-3" style="justify-items:center;padding-left:20%;padding-right:20%;">
+        <div class="content-cuadros" style="justify-items:center;">
             <div class="cuadro">
                 <img src="images/banners/1-info-shop.png" alt="delantera de auto" width="100" height="100">
                 <div class="mb-4"><span class="cuadro-titulo">1. Encuentra tu auto ideal</span></div>
