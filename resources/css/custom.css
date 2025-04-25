@@ -15,33 +15,6 @@
     line-height: normal;
 }
 
-/* md: en tailwind*/
-@media (min-width: 768px) {
-    .content-text-banner {
-        flex-direction: column;
-        align-items: center;
-    }
-    .text-banner {
-        font-size: 16px;
-    }
-}
-
-/* xl: en tailwind*/
-@media (min-width: 1280px) {
-    .content-text-banner {
-        flex-direction: row;
-    }
-    .text-banner {
-        width: 30%;
-        font-size: 18px;
-    }
-    .titulo-welcome-banner {
-        font-size: 56px;
-        line-height: 30px;
-        margin-bottom: 66px;
-    }
-}
-
 /* Componente -> info-shop-home */
 .section-info {
     background-color: #dfe0e0;
@@ -94,8 +67,17 @@
     line-height: normal;
 }
 
-/* md: en tailwind*/
+/* md: en tailwind  ----  Version tablet */
 @media (min-width: 768px) {
+    /* Componente -> welcome-banner */
+    .content-text-banner {
+        flex-direction: column;
+        align-items: center;
+    }
+    .text-banner {
+        font-size: 16px;
+    }
+    /* Componente -> info-shop-home */
     .content-cuadros {
         grid-template-columns: 1fr 1fr;
     }
@@ -107,8 +89,22 @@
     }
 }
 
-/* xl: en tailwind*/
+/* xl: en tailwind ----  Version desktop */
 @media (min-width: 1280px) {
+    /* Componente -> welcome-banner */
+    .content-text-banner {
+        flex-direction: row;
+    }
+    .text-banner {
+        width: 30%;
+        font-size: 18px;
+    }
+    .titulo-welcome-banner {
+        font-size: 56px;
+        line-height: 30px;
+        margin-bottom: 66px;
+    }
+    /* Componente -> info-shop-home */
     .section-info{
         min-height: 540px;
         align-content: center;
