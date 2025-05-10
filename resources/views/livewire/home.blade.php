@@ -1,21 +1,23 @@
 <div>
     <x-welcome-banner />
 
-    <livewire:components.info-shop-home/>
+    <livewire:components.info-shop-home />
 
-    <div class="max-w-screen-xl px-4 py-12 mx-auto space-y-12 sm:px-6 lg:px-8">
-        @if ($this->saleCollection)
-            <x-collection-sale />
-        @endif
-
-        @if ($this->randomCollection)
+    <div class="text-center max-w-screen-xl px-4 py-12 mx-auto space-y-12 sm:px-6 lg:px-8">
+        @if ($this->carCollection)
             <section>
                 <h2 class="text-3xl font-bold">
-                    {{ $this->randomCollection->translateAttribute('name') }}
+                    {{ $this->carCollection->translateAttribute('name') }}
                 </h2>
 
+                @if ($this->carCollection->translateAttribute('description'))
+                    <p class="mt-8 text-lg font-medium">
+                        {!! $this->carCollection->translateAttribute('description') !!}
+                    </p>
+                @endif
+
                 <div class="grid grid-cols-2 mt-8 lg:grid-cols-4 gap-x-4 gap-y-8">
-                    @foreach ($this->randomCollection->products as $product)
+                    @foreach ($this->carCollection->products as $product)
                         <x-product-card :product="$product" />
                     @endforeach
                 </div>
@@ -23,5 +25,5 @@
         @endif
     </div>
 
-    <livewire:components.form-contact/>
+    <livewire:components.form-contact />
 </div>

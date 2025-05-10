@@ -12,22 +12,22 @@ class Home extends Component
     /**
      * Return the sale collection.
      */
-    public function getSaleCollectionProperty(): Collection | null
+    public function getCarCollectionProperty(): Collection | null
     {
-        return Url::whereElementType((new Collection)->getMorphClass())->whereSlug('sale')->first()?->element ?? null;
+        return Url::whereElementType((new Collection)->getMorphClass())->whereSlug('primer-conjunto')->first()?->element ?? null;
     }
 
     /**
      * Return all images in sale collection.
      */
-    public function getSaleCollectionImagesProperty()
+    public function getCarCollectionImagesProperty()
     {
-        if (! $this->getSaleCollectionProperty()) {
+        if (! $this->getCarCollectionImagesProperty()) {
             return null;
         }
 
-        $collectionProducts = $this->getSaleCollectionProperty()
-            ->products()->inRandomOrder()->limit(4)->get();
+        $collectionProducts = $this->getCarCollectionImagesProperty()
+            ->products()->inRandomOrder()->limit(6)->get();
 
         $saleImages = $collectionProducts->map(function ($product) {
             return $product->thumbnail;
