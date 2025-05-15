@@ -14,7 +14,7 @@ class Home extends Component
      */
     public function getCarCollectionProperty(): Collection | null
     {
-        return Url::whereElementType((new Collection)->getMorphClass())->whereSlug('primer-conjunto')->first()?->element ?? null;
+        return Url::whereElementType((new Collection)->getMorphClass())->whereSlug('los-mejores-autos-disponibles')->first()?->element ?? null;
     }
 
     /**
