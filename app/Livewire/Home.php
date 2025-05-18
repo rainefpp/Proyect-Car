@@ -10,7 +10,7 @@ use Lunar\Models\Url;
 class Home extends Component
 {
     /**
-     * Return the sale collection.
+     * Return the car collection.
      */
     public function getCarCollectionProperty(): Collection | null
     {
@@ -18,7 +18,7 @@ class Home extends Component
     }
 
     /**
-     * Return all images in sale collection.
+     * Return all images in car collection.
      */
     public function getCarCollectionImagesProperty()
     {
@@ -29,11 +29,11 @@ class Home extends Component
         $collectionProducts = $this->getCarCollectionImagesProperty()
             ->products()->inRandomOrder()->limit(6)->get();
 
-        $saleImages = $collectionProducts->map(function ($product) {
+        $carImages = $collectionProducts->map(function ($product) {
             return $product->thumbnail;
         });
 
-        return $saleImages->chunk(2);
+        return $carImages->chunk(2);
     }
 
     /**
