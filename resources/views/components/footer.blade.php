@@ -42,12 +42,12 @@ li:hover {
 }
 </style>
 <footer  class=" text-black">
-  <div style="background-image: url('images/banners/fondoFooter.png');" class=" h-auto w-full mx-auto flex item-center place-content-between flex-wrap gap-8 divbordes">
+  <div style="background-image: url('{{ asset('images/banners/fondoFooter.png') }}');" class=" h-auto w-full mx-auto flex item-center place-content-between flex-wrap gap-8 divbordes">
   <!-- Columna 1 -->
   <div class="divalto marginizquierda  div1">
     <div class="ml-4 flex items-center ">    
         <h3 style="margin-right:12px;" class="text-black text-xl font-bold mb-4 mt-4 mr-10">Carzone</h3>
-        <img class="tamañoimg ml-6" src="images/logos/carzone-logo.png"alt="logo Carzone" height="103px" width="103px">
+        <img class="tamañoimg ml-6" src="{{ asset('images/logos/carzone-logo.png')}}"alt="logo Carzone" height="103px" width="103px">
     </div>
     <div class="mt-6">
       <p class="font-bold"> Tu plataforma confiable para encontrar vehículos de calidad.</p>
@@ -70,8 +70,8 @@ li:hover {
     <p class="font-bold"> Síguenos en nuestras redes sociales para conocer nuestras últimas ofertas y novedades.</p>
     <div class="flex my-4 place-content-between"> 
       <img class="marginderecha" src="{{asset('images/logos/iconoFB.png')}}" alt="logo Facebook">
-      <img class="marginderecha" src="images/logos/iconowsp.png"alt="logo Whatsaap">
-      <img class="marginderecha" src="images/logos/iconoig.png" alt="logo Instagram"> 
+      <img class="marginderecha" src="{{asset('images/logos/iconowsp.png')}}"alt="logo Whatsaap">
+      <img class="marginderecha" src="{{asset('images/logos/iconoig.png')}}" alt="logo Instagram"> 
     </div>
   </div>
   <!-- Columna 4 -->

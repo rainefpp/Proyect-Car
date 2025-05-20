@@ -5,7 +5,12 @@ module.exports = {
         './vendor/lunarphp/stripe-payments/resources/views/**/*.blade.php',
     ],
     theme: {
-        extend: {},
+        extend: {
+            colors: {
+                        'zenit-blue': '#365569',
+                    },
+
+        },
     },
     plugins: [require('@tailwindcss/forms')],
 };
