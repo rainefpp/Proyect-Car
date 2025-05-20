@@ -2,7 +2,7 @@
       action="{{ route('search.view') }}">
     <input name="term"
            type="search"
-           placeholder="Search for products"
+           placeholder="Buscar un Producto"
            class="w-full pl-10 text-sm border-2 border-gray-100 rounded-lg"
            value="{{ $this->term }}" />
 

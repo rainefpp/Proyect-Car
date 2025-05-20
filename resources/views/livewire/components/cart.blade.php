@@ -105,7 +105,7 @@
                     </div>
                 @else
                     <p class="py-4 text-sm font-medium text-center text-gray-500">
-                        Your cart is empty
+                        Su Carro está Vacío
                     </p>
                 @endif
 
@@ -120,7 +120,7 @@
                 </dl>
             @else
                 <p class="py-4 text-sm font-medium text-center text-gray-500">
-                    Your cart is empty
+                        Su Carro está Vacío
                 </p>
             @endif
         </div>
