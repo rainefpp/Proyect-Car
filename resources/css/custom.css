@@ -66,9 +66,18 @@
     font-weight: 400;
     line-height: normal;
 }
-/* Componenete home --> section -> los mejores autos*/
-
-
+/* Componenete home --> product-card */
+.contenedor-producto {
+    display:grid;
+    justify-self: center;
+    background-color: #efeff0;
+    width: 300px;
+    padding: 28px;
+    align-items: center;
+    gap: 32px;
+    border-radius: 15px;
+    border-bottom: 8px solid #ffa74d;
+}
 
 /* md: en tailwind  ----  Version tablet */
 @media (min-width: 768px) {
@@ -108,11 +117,11 @@
         margin-bottom: 66px;
     }
     /* Componente -> info-shop-home */
-    .section-info{
+    .section-info {
         min-height: 540px;
         align-content: center;
     }
-    .section-titulo{
+    .section-titulo {
         margin-bottom: 42px;
     }
     .content-cuadros {
