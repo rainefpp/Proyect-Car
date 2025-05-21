@@ -12,8 +12,8 @@
         {{ $product->translateAttribute('name') }}
     </strong>
 
-    <a class="" href="{{ route('product.view', $product->defaultUrl->slug) }}" wire:navigate>
-
+    <a class="pc-btn-compra" href="{{ route('product.view', $product->defaultUrl->slug) }}" wire:navigate>
+        Comprar
     </a>
 
     <p class="mt-1 text-sm text-gray-600">
