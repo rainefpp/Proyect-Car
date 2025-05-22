@@ -155,8 +155,11 @@
     .contenedor-producto {
         width: 300px;
     }
-    .contenedor-producto:nth-child(4){
-        grid-column: auto;
+    .contenedor-producto:nth-child(5){
+        grid-column-start: 2;
+    }
+    .contenedor-producto:nth-child(6){
+        grid-column-start: 3;
     }
 }
 
