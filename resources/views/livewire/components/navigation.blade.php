@@ -15,7 +15,7 @@
                     <a class="text-sm font-medium transition hover:opacity-75" href=""> Carrito </a>
                     <a class="text-sm font-medium transition hover:opacity-75" href=""> Mi Cuenta </a>
                     <a class="text-sm font-medium transition hover:opacity-75" href=""> Quiénes Somos </a>
-                    <a class="text-sm font-medium transition hover:opacity-75" href=""> Preguntas Frecuentes </a>
+                    <a class="text-sm font-medium transition hover:opacity-75" href="{{ route('faqs.page') }}"> Preguntas Frecuentes </a>
                     <a class="text-sm font-medium transition hover:opacity-75" href=""> Contacto </a>
             </nav>
             <a class="text-sm text-white font-medium transition hover:opacity-75 rounded-lg px-8 py-1" style="background: var(--Secundary-500, #FFA74D); margin-left:10px;" href=""> Comprar Aquí </a>

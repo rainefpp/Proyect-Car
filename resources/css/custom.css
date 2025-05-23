@@ -1,7 +1,109 @@
+/*estilos FAQS*/
 .interfont{
     font-family: Inter;
 }
-
 .fondo1 {
     background-color: #E7E8E8;
+}
+.tamañobannerfaq{
+     height: 580px;
+       background-position: center;  
+       background-repeat: no-repeat; 
+}
+
+@media (max-width:836px) {
+        .tamañobannerfaq{
+        height: 432px;
+        background-size: cover;  }
+}
+.divpregunta{
+
+  display: flex;
+  flex-direction: column;       
+  width: 100%;
+  max-width: 800px;             
+  margin: 0 auto;              
+  padding: 20px;
+  gap: 10px;
+  background-color: white;
+  border-radius: 8px;      
+}
+/*estilos footer*/
+    .divalto{
+        margin-top:5%;
+        height: 255px;
+    }
+    .marginizquierda{
+        margin-left:5%;
+    }
+    .marginderecha{
+      margin-right:2%
+    }
+    .tamañoimg{
+        height:25%;
+    }
+    .ulfooter {
+  list-style-type: disc; /* Puntos antes de los elementos */
+  padding-left: 20px; /* Un poco de espacio para el marcador */
+}
+
+
+.lifooter {
+  color: black; /* Color por defecto */
+  transition: color 0.3s ease; /* Transición suave para el cambio de color */
+  margin-top: 3%;  /* Márgen en la parte superior */
+  margin-bottom: 1%;  /* Márgen en la parte inferior */
+}
+.lifooter:hover {
+  color: gray; /* Color cuando el mouse pasa sobre el elemento */
+}
+.divfondofooter{
+  background-size: cover;
+  background-position: center;  
+  background-repeat: no-repeat;
+  display: flex;
+    width:100%;
+    height: 315px;
+    padding: 32px;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 32px;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+}
+.divbordes{
+  border: 1px solid black;
+}
+.div1footer{
+  max-width:454px;
+}
+.div2footer{
+  min-width: 210px;
+}
+.div3footer{
+  max-width:230px;
+}
+.div4footer{
+    min-height: 255px;
+}
+
+@media (max-width:1128px) {
+    .div1footer{
+         max-width:227px;
+    }
+}
+
+@media (max-width: 870px) {
+    .divfondofooter{
+        justify-content: center; /* horizontal */
+        align-items: center;  
+    }
+  .div1footer,.div2footer,.div3footer,.div4footer{
+
+    min-width: 365px;
+  }
+}
+@media (max-width:388px){
+  
 }
