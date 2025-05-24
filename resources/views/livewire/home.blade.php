@@ -25,5 +25,7 @@
         @endif
     </div>
 
+    <livewire:components.coments-home />
+
     <livewire:components.form-contact />
 </div>

@@ -92,6 +92,9 @@
     font-weight: 700;
     line-height: normal;
 }
+.contenedor-coments{
+
+}
 
 /* md: en tailwind  ----  Version tablet */
 @media (min-width: 768px) {
