@@ -1,4 +1,3 @@
-
 <footer  class=" text-black">
   <div style="background-image: url('{{ asset('images/banners/fondoFooter.png') }}');" class=" divfondofooter h-auto w-full mx-auto flex item-center place-content-between flex-wrap gap-8">
   <!-- Columna 1 -->
