@@ -6,6 +6,8 @@ Este repositorio usa el starter kit de lunar basado en laravel, para mas informa
 
 # Installation
 
+-composer install
+
 -php artisan key:generate
 
 -crear y configurar .env
