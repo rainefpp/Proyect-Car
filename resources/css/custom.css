@@ -17,7 +17,6 @@
         background-size: cover;  }
 }
 .divpregunta{
-
   display: flex;
   flex-direction: column;       
   width: 100%;
@@ -46,8 +45,6 @@
   list-style-type: disc; /* Puntos antes de los elementos */
   padding-left: 20px; /* Un poco de espacio para el marcador */
 }
-
-
 .lifooter {
   color: black; /* Color por defecto */
   transition: color 0.3s ease; /* Transición suave para el cambio de color */
@@ -93,20 +90,90 @@
 .contenedorproductos{
 display: grid;
 grid-template-columns: 250px 1fr 1fr;
+}
 
-}
-.derechaproducto{
-  
-}
 .imagenVertical{
   width: 50%;
   margin-bottom: 12px;
   margin-left: 25px;
 }
+
 .imagenprincipal{
   margin-right: 100px;
+  margin-left: -100px;
 }
+.derechaproducto{
+  margin-left: -65px;
+}
+.etiquetaDescipcion{
+  font-family: Inter;
+  font-size: 27px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  background-color: #FFA74D;
+  padding: 10px;
+  color: #E7E8E8;
+  border-radius:9px 9px 0px 0px;
+  max-width: 179px;
+}
+.textosdescripcion{
+  h1{
+    color: #000;
+    font-family: Inter;
+    font-size: 39.81px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  p{
+    color: #000;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+}
+.textosdetalles{
+margin-left: 22px;
+margin-right: 22px;
+margin-top: 22px;
+width: 95%;
+border-radius: 9px;
 
+  h2{
+    font-family: Inter;
+    font-size: 39.81px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  p{
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 1rem;
+    margin-bottom: 2%;
+  }
+  h3{
+    font-family: Inter;
+    font-size: 33.18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  li{
+      list-style-type: disc; /* Puntito delante */
+      font-weight: normal;     /* Negrita */
+      margin-bottom: 2px;    /* Espacio hacia abajo como un renglón */
+      margin-left: 3%;
+  }
+
+}
 @media (max-width:1128px) {
     .div1footer{
          max-width:227px;
@@ -117,23 +184,99 @@ grid-template-columns: 250px 1fr 1fr;
   }
   .derechaproducto{
     grid-column: 1/3;
+    margin: 0px;
   }
 }
-
-
-
-@media (max-width: 870px) {
+@media (max-width: 834px) {
     .divfondofooter{
         justify-content: center; /* horizontal */
         align-items: center;  
     }
   .div1footer,.div2footer,.div3footer,.div4footer{
-
     min-width: 365px;
+  }
+  .imagenprincipal{
+    margin-left: 1rem;
+  }
+
+  .derechaproducto{
+    margin-left: 1rem;
   }
 
 }
+@media (max-width:430px){
 
-@media (max-width:388px){
+  body{
+    margin: 0px;
+    background-color:FFA74D ;
+  }
+  .imagenprincipal{
+    margin-right: 0px;
+    width:100%;
+    max-width: 100%;
+    object-fit: contain;
+    margin: 0px;
+  }
+  .contenedorproductos{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    grid-template-rows: 378px 163px 541px;
+  }
+  .divimagenprincipal{
+    grid-column: 1/3;
+    grid-row: 1/2;
+  }
+  .divgaleriavertical{
+    grid-row: 2/3;
+    grid-column: 1/2;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 354px;
+    height: 161px;
+    justify-self: stretch;
+  }
+  .derechaproducto{
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
+  .divimagenprincipal{
+    grid-column: 1/2;
+    grid-row: 1/2 ;
+  }
+.imagenVertical{
+  display: block;
+  margin-top: 32px;
+  gap: 30px;
+  width: 95%;
+  object-fit: contain;
+}
+.textosdescripcion{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+.estrellas{
+  display: flex;
+  justify-content: center; /* centra las estrellas en la línea horizontal */
+  margin-top: 16px;
+}
+.textosdetalles{
+
+  h2{
+    font-family: Inter;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
   
+  p{
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+}
 }
