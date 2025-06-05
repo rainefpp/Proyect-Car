@@ -14,5 +14,9 @@
     {
         "name": "Sale",
         "description": "50% OFF Selected Items"
+    },
+    {
+        "name": "Los mejores autos disponibles",
+        "description": "Descubre algunos de los modelos más populares y mejor valorados por nuestros clientes"
     }
 ]

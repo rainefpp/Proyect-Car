@@ -207,5 +207,71 @@
                 "values": ["Small", "Medium", "Large", "X-Large"]
             }
         ]
+    },
+    {
+        "attributes": {
+            "name": "Zenith Cross",
+            "description": "Una descripcion buena para un buen auto:c"
+        },
+        "collections": ["los mejores autos disponibles"],
+        "brand": "Fruit of the loom",
+        "sku": "ZENT-CS",
+        "price": "3500",
+        "image": "ZENITH-CROSS.png"
+    },
+    {
+        "attributes": {
+            "name": "Crimson Rider",
+            "description": "Una descripcion buena para un buen auto:c"
+        },
+        "collections": ["los mejores autos disponibles"],
+        "brand": "Fruit of the loom",
+        "sku": "CRIN-RD",
+        "price": "65000",
+        "image": "CRIMSON-RIDER.png"
+    },
+    {
+        "attributes": {
+            "name": "Nimbus Eco",
+            "description": "Una descripcion buena para un buen auto:c"
+        },
+        "collections": ["los mejores autos disponibles"],
+        "brand": "Fruit of the loom",
+        "sku": "NIMB-EC0",
+        "price": "366000",
+        "image": "NIMBUS-ECO.png"
+    },
+    {
+        "attributes": {
+            "name": "Silver Royale",
+            "description": "Una descripcion buena para un buen auto:c"
+        },
+        "collections": ["los mejores autos disponibles"],
+        "brand": "Fruit of the loom",
+        "sku": "SLV-RY",
+        "price": "555000",
+        "image": "SILVER-ROYAL.png"
+    },
+    {
+        "attributes": {
+            "name": "Zaika Roi",
+            "description": "Una descripcion buena para un buen auto:c"
+        },
+        "collections": ["los mejores autos disponibles"],
+        "brand": "Fruit of the loom",
+        "sku": "ZAIKA-ROI",
+        "price": "399900",
+        "image": "ZAIKA-ROI.png"
+    },
+    {
+        "attributes": {
+            "name": "Blank Zetar",
+            "description": "Una descripcion buena para un buen auto:c"
+        },
+        "collections": ["los mejores autos disponibles"],
+        "brand": "Fruit of the loom",
+        "sku": "BLNK-ZR",
+        "price": "9550000",
+        "image": "BLANK-ZET.png"
     }
 ]
