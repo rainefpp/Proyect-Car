@@ -101,6 +101,7 @@
     align-items: center;
     text-align: center;
     background-color: #dfe0e0;
+    padding-bottom: 8rem;
 }
 .titulo-coments {
     color: #000;
@@ -161,8 +162,15 @@
         font-size: 36px;
     }
     /* Componenete home --> componente coments */
+    .titulo-coments{
+        font-size: 38px;
+    }
+    .subtitulo-coments{
+        width: auto;
+    }
     .subcont-coments {
         height: 200px;
+        margin-top: 7rem;
         grid-column: 1 / -1; /* Ocupa todo el ancho */
         grid-template-columns: 7fr 3fr; /* 70%/30% */
     }
@@ -216,6 +224,38 @@
     }
     .contenedor-producto:nth-child(6) {
         grid-column-start: 3;
+    }
+    /* Componenete home --> componente coments */
+    .subtitulo-coments{
+        font-size: 18px;
+    }
+    .cont-prim{
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+    .card-coment-izq{
+        padding-left: 15rem;
+        padding-right: 0;
+    }
+    .card-coment-der{
+        padding-left: 0;
+        padding-right: 15rem;
+    }
+    .description-card-coment{
+        width: 250px;
+    }
+    .subcont-coments div{
+        padding-left: 12rem;
+        padding-right: 2rem;
+    }
+    .subcont-coments {
+        grid-template-columns: 6fr 4fr; /* 70%/30% */
+    }
+    .img-coments{
+        height: max-content;
+    }
+    .contenedor-coments{
+        padding-bottom: 12rem;
     }
 }
 
