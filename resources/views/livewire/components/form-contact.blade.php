@@ -9,35 +9,52 @@
                 <h2 class="text-3xl font-bold text-white mb-6">Formulario de Contacto</h2>
                 <p class="text-lg text-white mb-8">¿Tienes preguntas o necesitas ayuda para encontrar el vehículo ideal?
                 </p>
+                @if (session('message'))
+                    <div class="alert alert-success mb-4">
+                        {{ session('message') }}
+                    </div>
+                @endif
 
-                <form class="space-y-6" method="POST" action="/contact">
+                <form class="space-y-6" wire:submit.prevent="submit">
                     @csrf
                     <!-- Campos del formulario... -->
                     <div>
                         <label for="nombre" class="block text-sm font-medium text-white mb-1">Nombre y
                             Apellido</label>
-                        <input wire:model="name" type="text" id="nombre" placeholder="Franco Paredes Pardo"
+                        <input wire:model.lazy="name" type="text" id="nombre" placeholder="Franco Paredes Pardo"
                             class="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
+                        @error('name')
+                            <span class="error">{{ $message }}</span>
+                        @enderror
                     </div>
 
                     <div>
                         <label for="correo" class="block text-sm font-medium text-white mb-1">Correo
                             electrónico</label>
-                        <input wire:model="email" type="email" id="correo" placeholder="fparedesp@ing.ucsc.cl"
+                        <input wire:model.lazy="email" type="email" id="correo" placeholder="fparedesp@ing.ucsc.cl"
                             class="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
+                        @error('email')
+                            <span class="error">{{ $message }}</span>
+                        @enderror
                     </div>
 
                     <div>
                         <label for="telefono" class="block text-sm font-medium text-white mb-1">Número
                             Telefónico</label>
-                        <input wire:model="phone" type="tel" id="telefono" placeholder="9XX34XX2X"
+                        <input wire:model.lazy="phone" type="tel" id="telefono" placeholder="9XX34XX2X"
                             class="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
+                        @error('phone')
+                            <span class="error">{{ $message }}</span>
+                        @enderror
                     </div>
 
                     <div>
                         <label for="mensaje" class="block text-sm font-medium text-white mb-1">Mensaje</label>
-                        <textarea wire:model="message" id="mensaje" rows="4" placeholder="Escribe tu mensaje aquí"
+                        <textarea wire:model.lazy="message" id="mensaje" rows="4" placeholder="Escribe tu mensaje aquí"
                             class="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"></textarea>
+                        @error('message')
+                            <span class="error">{{ $message }}</span>
+                        @enderror
                     </div>
 
                     <button type="submit"

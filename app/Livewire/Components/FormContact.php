@@ -22,16 +22,21 @@ class FormContact extends Component
         'phone.regex' => 'El formato del teléfono no es válido. Ej: +34 123 456 789',
     ];
 
-    public function submitForm()
+    public function submit()
     {
         $this->validate();
 
-        Mail::to('contacto@tudominio.com')->send(
-            new ContactFormSubmitted($this->name, $this->email, $this->phone, $this->message)
-        );
+        try {
+            Mail::to('fparedesp@ing.ucsc.cl')->send(
+                new ContactFormSubmitted($this->name, $this->email, $this->phone, $this->message)
+            );
+            session()->flash('success', '¡Mensaje enviado! Gracias por contactarnos.');
+        } catch (\Throwable $th) {
+            session()->flash('error', '¡Error al enviar el mensaje!. Vuelve a intentar nuevamente.');
+        }
 
         $this->reset();
-        session()->flash('success', '¡Mensaje enviado! Gracias por contactarnos.');
+
     }
     public function render(): View
     {
