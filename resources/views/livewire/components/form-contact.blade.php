@@ -9,9 +9,9 @@
                 <h2 class="text-3xl font-bold text-white mb-6">Formulario de Contacto</h2>
                 <p class="text-lg text-white mb-8">¿Tienes preguntas o necesitas ayuda para encontrar el vehículo ideal?
                 </p>
-                @if (session('message'))
+                @if (session('success'))
                     <div class="alert alert-success mb-4">
-                        {{ session('message') }}
+                        {{ session('success') }}
                     </div>
                 @endif
 
