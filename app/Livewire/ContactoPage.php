@@ -4,10 +4,10 @@ namespace App\Livewire;
 
 use Livewire\Component;
 
-class Contacto extends Component
+class ContactoPage extends Component
 {
     public function render()
     {
-        return view('livewire.contacto');
+        return view('livewire.contacto-page');
     }
 }

@@ -150,6 +150,10 @@
     background-color: #ffa74d;
     color: white;
 }
+/* Componente contacto-page --> componente form-contact */
+.contacto-cont-referencial .cont-form-contact> *:nth-child(1) {
+  order: 2;
+}
 /* md: en tailwind  ----  Version tablet */
 @media (min-width: 768px) {
     /* Componente -> welcome-banner */

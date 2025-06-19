@@ -7,6 +7,7 @@ use App\Livewire\Home;
 use App\Livewire\ProductPage;
 use App\Livewire\SearchPage;
 use Illuminate\Support\Facades\Route;
+use App\Livewire\ContactoPage;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,5 +31,7 @@ Route::get('search', SearchPage::class)->name('search.view');
 Route::get('checkout', CheckoutPage::class)->name('checkout.view');
 
 Route::get('checkout/success', CheckoutSuccessPage::class)->name('checkout-success.view');
+
+Route::get('contacto', ContactoPage::class)->name('contacto-page.view');
 
 
