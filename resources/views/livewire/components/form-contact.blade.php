@@ -1,7 +1,7 @@
-<section class="w-full sm:px-6 lg:px-8" style="background: var(--Primary-500, #365569);padding:0!important;">
+<section class="w-full" style="background-color: #365569;padding:0!important;">
 
     <!-- Contenedor principal modificado -->
-    <div class="flex justify-between flex-nowrap lg:flex-col lg:gap-12" style="gap: 0;">
+    <div class="grid gap-4 cont-form-contact" style="">
 
         <!-- Columna del formulario -->
         <div class="w-full lg:w-1/2 lg:order-1">
@@ -58,15 +58,15 @@
                     </div>
 
                     <button type="submit"
-                        class="w-full flex justify-center py-3 px-6 border border-transparent rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                        class="form-contact-btn">
                         Enviar Mensaje
                     </button>
                 </form>
             </div>
         </div>
 
-        <!-- Columna de la imagen - modificada -->
-        <div class="w-full lg:w-1/2 lg:order-2" style="padding: 0; margin: 0">
+        <!-- Columna de la imagen -- modificada -->
+        <div class="w-full" style="padding: 0; margin: 0">
             <img src="images/banners/contact-form.png" alt="Imagen de contacto" style="padding: 0; margin: 0"
                 class="w-full h-full object-cover">
         </div>

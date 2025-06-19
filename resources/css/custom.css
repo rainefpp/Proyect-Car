@@ -92,7 +92,7 @@
     font-weight: 700;
     line-height: normal;
 }
-/* Componenete home --> componente coments */
+/* Componente home --> componente coments */
 .contenedor-coments {
     display: grid;
     gap: 32px;
@@ -140,7 +140,16 @@
     font-weight: 500;
     line-height: normal;
 }
-
+/* Componente home --> componente form-contact */
+.form-contact-btn {
+    width: 100%;
+    padding: 8px 16px;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 10px;
+    background-color: #ffa74d;
+    color: white;
+}
 /* md: en tailwind  ----  Version tablet */
 @media (min-width: 768px) {
     /* Componente -> welcome-banner */
@@ -162,10 +171,10 @@
         font-size: 36px;
     }
     /* Componenete home --> componente coments */
-    .titulo-coments{
+    .titulo-coments {
         font-size: 38px;
     }
-    .subtitulo-coments{
+    .subtitulo-coments {
         width: auto;
     }
     .subcont-coments {
@@ -174,7 +183,7 @@
         grid-column: 1 / -1; /* Ocupa todo el ancho */
         grid-template-columns: 7fr 3fr; /* 70%/30% */
     }
-    .img-coments{
+    .img-coments {
         height: 200px;
     }
 }
@@ -226,37 +235,42 @@
         grid-column-start: 3;
     }
     /* Componenete home --> componente coments */
-    .subtitulo-coments{
+    .subtitulo-coments {
         font-size: 18px;
     }
-    .cont-prim{
+    .cont-prim {
         padding-left: 4rem;
         padding-right: 4rem;
     }
-    .card-coment-izq{
+    .card-coment-izq {
         padding-left: 15rem;
         padding-right: 0;
     }
-    .card-coment-der{
+    .card-coment-der {
         padding-left: 0;
         padding-right: 15rem;
     }
-    .description-card-coment{
+    .description-card-coment {
         width: 250px;
     }
-    .subcont-coments div{
+    .subcont-coments div {
         padding-left: 12rem;
         padding-right: 2rem;
     }
     .subcont-coments {
         grid-template-columns: 6fr 4fr; /* 70%/30% */
     }
-    .img-coments{
+    .img-coments {
         height: max-content;
     }
-    .contenedor-coments{
+    .contenedor-coments {
         padding-bottom: 12rem;
     }
+    /* Componenete home --> componente form-contact*/
+    .cont-form-contact{
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
 }
 
 /* --------------------
