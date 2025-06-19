@@ -279,4 +279,48 @@ border-radius: 9px;
     line-height: normal;
   }
 }
+
 }
+/* Estilos Login*/
+
+.registro{
+  position: relative;
+  height: 400px; /* o el alto que necesites */
+  background: #DFE0E0;
+  overflow: visible; /* permite que la imagen sobresalga */
+  border-radius: 30px;
+  padding: 20px;
+
+}
+.imagen-circular {
+position: absolute;
+  top: -80px; /* ajusta este valor según cuánto quieras que sobresalga */
+  left: 50%;
+  width: 90px; /* ancho de la imagen */
+  height: 90px; /* alto de la imagen */
+  transform: translateX(-50%);
+  background-color: white;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.formulario-relleno{
+  margin-top: 0%;
+}
+
+.titulosecion{
+  font-family: Inter;
+  font-size: 33.18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  color: #000000;
+  text-align: center;
+}
+.boton-login{
+    background-color:  #FFA74D;
+  }
+
+    .boton-login:hover{
+            background-color: #FF8C16 !important;        
+    }
+

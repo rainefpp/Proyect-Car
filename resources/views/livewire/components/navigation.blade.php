@@ -6,7 +6,7 @@
                wire:navigate
             >
                 <span class="sr-only">Home</span>
-                <img class="" style="width:72%;" src="{{ asset('images/logos/carzone-logo.png') }}" alt="Logo"><img>   
+                <img class="" style="width:72%;" src="{{ asset('images/logos/carzone-logo.png')}}" alt="Logo"></img>   
             </a>
 
             <nav class="hidden lg:gap-4 lg:flex lg:ml-8 mx-2">      
@@ -20,6 +20,7 @@
             </nav>
             <a class="text-sm text-white font-medium transition hover:opacity-75 rounded-lg px-8 py-1" style="background: var(--Secundary-500, #FFA74D); margin-left:10px;" href=""> Comprar Aquí </a>
         </div>  
+              
 
         <div class="flex items-center justify-between flex-1 ml-4 lg:justify-end">
             <x-header.search class="max-w-sm mr-4" />
@@ -45,6 +46,9 @@
                             </svg>
                         </span>
                     </button>
+                      <div class="flex items-center -mr-4 sm:-mr-6 lg:mr-0">
+                          @livewire("auth.login-modal")
+                    </div>   
 
                     <div x-cloak
                          x-transition
@@ -74,9 +78,13 @@
                                     <a class="text-sm font-medium transition hover:opacity-75" href=""> Comprar Aquí </a>
                                 </li>
                         </ul>
+                        
                     </div>
                 </div>
             </div>
+            
         </div>
+    </div>
+    <div>
     </div>
 </header>
