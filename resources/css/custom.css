@@ -151,8 +151,62 @@
     color: white;
 }
 /* Componente contacto-page --> componente form-contact */
-.contacto-cont-referencial .cont-form-contact> *:nth-child(1) {
-  order: 2;
+.contacto-cont-referencial .cont-form-contact > *:nth-child(1) {
+    order: 2;
+}
+/* Componente quienes-somos-page */
+
+.qs-titulo {
+    color: #000;
+    text-align: center;
+    font-family: Inter;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.card-qs {
+    width: 312px;
+    padding: 20px;
+    gap: 42px;
+    border-radius: 15px;
+    background-color: #fff;
+    align-self: center;
+    margin-bottom: 1rem;
+}
+.card-qs-titulo {
+    color: #000;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.card-qs-texto {
+    color: #000;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.qs-second-titulo {
+    color: #000;
+    text-align: center;
+    font-family: Inter;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.qs-second-subtitulo {
+    color: #000;
+    text-align: center;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
 }
 /* md: en tailwind  ----  Version tablet */
 @media (min-width: 768px) {
@@ -271,10 +325,9 @@
         padding-bottom: 12rem;
     }
     /* Componenete home --> componente form-contact*/
-    .cont-form-contact{
+    .cont-form-contact {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
-
 }
 
 /* --------------------
