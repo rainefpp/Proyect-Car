@@ -1,8 +1,8 @@
 <div>
-    <div class="grid gap-4" style="background-color: #E7E8E8;">
+    <div class="grid gap-4" style="background-color: #E7E8E8; padding-bottom: 4rem;">
         <img src="images/banners/qs-intro.png" alt="people" width="100%" height="100%">
         <h1 class="mt-2 text-center qs-titulo">Conocer nuestra historia es crecer juntos</h1>
-        <div class="grid gap-4" style="justify-items: center;">
+        <div class="grid gap-4 qs-first-grid" style="justify-items: center;">
             <div class="card-qs">
                 <h1 class="card-qs-titulo">Nuestra Misión</h1>
                 <p class="card-qs-texto mt-4">Brindar una experiencia de compra automotriz fácil, segura y confiable,
@@ -22,10 +22,10 @@
                     equipo, nos consolidamos como una plataforma confiable, rápida y segura. Hoy, seguimos creciendo
                     para acercar el mundo automotriz a cada rincón del país.</p>
             </div>
-            <img src="images/banners/qs-outro.png" alt="gente" width="100%" height="100%">
+            <img src="images/banners/qs-outro.png" alt="gente" width="100%" height="100%" class="qs-img-outro">
         </div>
         <h1 class="qs-second-titulo mt-4">Nuestros Valores</h1>
-        <div class="grid gap-4 text-center" style="justify-items: center;margin-bottom:2rem;">
+        <div class="grid gap-4 text-center qs-second-grid" style="justify-items: center;margin-bottom:2rem;">
             <div class="grid mt-4 gap-4">
                 <img src="images/compromiso-qs.png" alt="compromiso" width="130" height="130">
                 <h1 class="qs-second-subtitulo">Compromiso</h1>

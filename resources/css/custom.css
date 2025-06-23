@@ -203,7 +203,7 @@
     color: #000;
     text-align: center;
     font-family: Inter;
-    font-size: 20px;
+    font-size: 18px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -243,6 +243,27 @@
     }
     .img-coments {
         height: 200px;
+    }
+    /* Componente quienes-somos-page */
+    .card-qs {
+        width: 400px;
+        padding: 20px;
+    }
+    .qs-img-outro {
+        width: 60%;
+        height: auto;
+    }
+    .card-qs-titulo {
+        font-size: 26px;
+    }
+    .card-qs-texto {
+        font-size: 16px;
+    }
+    .qs-second-grid{
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    .qs-second-grid div:nth-child(4) {
+        grid-column: span 3;
     }
 }
 
@@ -327,6 +348,29 @@
     /* Componenete home --> componente form-contact*/
     .cont-form-contact {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    /* Componente quienes-somos-page */
+    .qs-first-grid{
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        column-gap: 0;
+        padding-left: 20%;
+        padding-right: 20%;
+        margin-top: 1.5rem;
+    }
+    .qs-img-outro {
+        width: 82%;
+        height: auto;
+    }
+    .qs-second-grid{
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+    .qs-second-grid div:nth-child(4) {
+        grid-column: auto;
+    }
+    .qs-second-titulo{
+        font-size: 32px;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
     }
 }
 
