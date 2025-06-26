@@ -5,7 +5,7 @@
 
     <div class="text-center max-w-screen-xl px-4 py-12 mx-auto space-y-12 sm:px-6 lg:px-8">
         @if ($this->carCollection)
-            <section>
+            <section class="section-home">
                 <h2 class="text-3xl font-bold">
                     {{ $this->carCollection->translateAttribute('name') }}
                 </h2>

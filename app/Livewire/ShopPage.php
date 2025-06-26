@@ -11,27 +11,27 @@ class ShopPage extends Component
     /**
      * Return the products collection.
      */
-    public function getCarCollectionProperty(): Collection | null
+    public function getProductCollectionProperty(): Collection | null
     {
-        return Url::whereElementType((new Collection)->getMorphClass())->whereSlug('main')->first()?->element ?? null;
+        return Url::whereElementType((new Collection)->getMorphClass())->whereSlug('shop')->first()?->element ?? null;
     }
     /**
-     * Return all images in car collection.
+     * Return all images in products collection.
      */
-    public function getCarCollectionImagesProperty()
+    public function getProductCollectionImagesProperty()
     {
-        if (! $this->getCarCollectionImagesProperty()) {
+        if (! $this->getProductCollectionImagesProperty()) {
             return null;
         }
 
-        $collectionProducts = $this->getCarCollectionImagesProperty()
+        $collectionProducts = $this->getProductCollectionImagesProperty()
             ->products()->inRandomOrder()->limit(6)->get();
 
-        $carImages = $collectionProducts->map(function ($product) {
+        $ProductImages = $collectionProducts->map(function ($product) {
             return $product->thumbnail;
         });
 
-        return $carImages->chunk(2);
+        return $ProductImages->chunk(2);
     }
     public function render()
     {
