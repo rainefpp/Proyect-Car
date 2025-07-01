@@ -5,19 +5,19 @@
             <!-- Buscador -->
             <div>
                 <label class="block text-sm font-medium text-gray-700">Buscar</label>
-                <input type="text" wire:model.debounce.500ms="search" placeholder="Nombre o descripción..."
+                <input type="text" wire:model.debounce.500ms.live="search" placeholder="Nombre o descripción..."
                     class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
             </div>
 
             <!-- Rango de precios -->
             <div>
                 <label class="block text-sm font-medium text-gray-700">
-                    Precio: ${{ number_format($minPrice, 2) }} - ${{ number_format($maxPrice, 2) }}
+                    Precio: ${{ number_format($this->minPrice, 2) }} - ${{ number_format($this->maxPrice, 2) }}
                 </label>
                 <div class="flex space-x-4 mt-1">
-                    <input type="range" wire:model="minPrice" min="0" max="{{ $this->priceRange['max'] }}"
+                    <input type="range" wire:model.live="minPrice" min="{{ $this->priceRange['min'] }}" max="{{ $this->priceRange['max'] }}"
                         class="w-full">
-                    <input type="range" wire:model="maxPrice" min="0" max="{{ $this->priceRange['max'] }}"
+                    <input type="range" wire:model.live="maxPrice" min="{{ $this->priceRange['min'] }}" max="{{ $this->priceRange['max'] }}"
                         class="w-full">
                 </div>
             </div>
@@ -25,7 +25,7 @@
             <!-- Colecciones -->
             <div>
                 <label class="block text-sm font-medium text-gray-700">Colecciones</label>
-                <select wire:model="selectedCollections" multiple
+                <select wire:model.live="selectedCollections" multiple
                     class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
                     @if ($this->availableCollections)
                         @foreach ($this->availableCollections as $collection)
@@ -41,7 +41,7 @@
             <!-- Ordenar por -->
             <div>
                 <label class="block text-sm font-medium text-gray-700">Ordenar por</label>
-                <select wire:model="sortBy"
+                <select wire:model.live="sortBy"
                     class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
                     <option value="latest">Más recientes</option>
                     <option value="price-low">Precio: menor a mayor</option>

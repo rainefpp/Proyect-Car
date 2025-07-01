@@ -17,7 +17,7 @@ class ShopPage extends Component
     // Filtros
     public $search = '';
     public $minPrice = 0;
-    public $maxPrice = 1000;
+    public $maxPrice = 1000000;
     public $selectedCollections = [];
     public $sortBy = 'latest';
 
@@ -53,7 +53,7 @@ class ShopPage extends Component
         // Aplicamos ordenación
         $this->applySorting($products);
 
-        return $products->paginate(4);
+        return $products->paginate(12);
     }
 
     /**
