@@ -17,7 +17,7 @@ class ShopPage extends Component
     // Filtros
     public $search = '';
     public $minPrice = 0;
-    public $maxPrice = 1000000;
+    public $maxPrice = 100000;
     public $selectedCollections = [];
     public $sortBy = 'latest';
 
@@ -62,17 +62,21 @@ class ShopPage extends Component
     protected function applyFilters(&$query)
     {
         // Filtro de búsqueda
+
         if ($this->search) {
             $query->where(function ($q) {
-                $q->where('attribute_data->name->en', 'like', '%' . $this->search . '%')
-                    ->orWhere('attribute_data->description->en', 'like', '%' . $this->search . '%');
+                $searchTerm = strtolower($this->search);
+                // Búsqueda en name.value.en
+                $q->whereRaw('LOWER(JSON_UNQUOTE(JSON_EXTRACT(attribute_data, "$.name.value.en"))) LIKE ?', ['%' . $searchTerm . '%'])
+                    // Búsqueda en description.value.en
+                    ->orWhereRaw('LOWER(JSON_UNQUOTE(JSON_EXTRACT(attribute_data, "$.description.value.en"))) LIKE ?', ['%' . $searchTerm . '%']);
             });
         }
 
         // Filtro por colecciones
         if ($this->selectedCollections) {
             $query->whereHas('collections', function ($q) {
-                $q->whereIn('id', $this->selectedCollections);
+                $q->whereIn('lunar_collections.id', $this->selectedCollections);
             });
         }
 
@@ -127,7 +131,7 @@ class ShopPage extends Component
     public function getPriceRangeProperty()
     {
         if (!$this->productCollection) {
-            return ['min' => 0, 'max' => 1000];
+            return ['min' => 0, 'max' => 100000];
         }
 
         $minPrice = Product::query()
@@ -146,7 +150,7 @@ class ShopPage extends Component
 
         return [
             'min' => $minPrice ? $minPrice / 100 : 0,
-            'max' => $maxPrice ? $maxPrice / 100 : 1000
+            'max' => $maxPrice ? $maxPrice / 100 : 100000
         ];
     }
 
