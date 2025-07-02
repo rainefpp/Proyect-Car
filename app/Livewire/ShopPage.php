@@ -93,35 +93,47 @@ class ShopPage extends Component
      */
     protected function applySorting(&$query)
     {
+        // Mantener el orden por posición en colección
+        $query->orderBy('lunar_collection_product.position', 'asc');
+
         switch ($this->sortBy) {
             case 'price-low':
-                $query->orderBy(
-                    Price::select('price')
-                        ->whereColumn('priceable_id', 'lunar_product_variants.id')
-                        ->where('priceable_type', ProductVariant::class)
-                        ->orderBy('price', 'asc')
-                        ->limit(1),
-                    'asc'
-                );
+                $query->select('lunar_products.*')
+                    ->leftJoin('lunar_product_variants', function ($join) {
+                        $join->on('lunar_products.id', '=', 'lunar_product_variants.product_id')
+                            ->whereNull('lunar_product_variants.deleted_at');
+                    })
+                    ->leftJoin('lunar_prices', function ($join) {
+                        $join->on('lunar_product_variants.id', '=', 'lunar_prices.priceable_id')
+                            ->where('lunar_prices.priceable_type', ProductVariant::class);
+                    })
+                    ->selectRaw('MIN(lunar_prices.price) as min_price')
+                    ->groupBy('lunar_products.id', 'lunar_products.brand_id', 'lunar_products.product_type_id', 'lunar_products.status', 'lunar_products.attribute_data', 'lunar_products.created_at', 'lunar_products.updated_at', 'lunar_products.deleted_at', 'lunar_collection_product.collection_id', 'lunar_collection_product.product_id', 'lunar_collection_product.position','lunar_collection_product.created_at','lunar_collection_product.updated_at')
+                    ->orderBy('min_price', 'asc');
                 break;
 
             case 'price-high':
-                $query->orderBy(
-                    Price::select('price')
-                        ->whereColumn('priceable_id', 'lunar_product_variants.id')
-                        ->where('priceable_type', ProductVariant::class)
-                        ->orderBy('price', 'desc')
-                        ->limit(1),
-                    'desc'
-                );
+                $query->select('lunar_products.*')
+                    ->leftJoin('lunar_product_variants', function ($join) {
+                        $join->on('lunar_products.id', '=', 'lunar_product_variants.product_id')
+                            ->whereNull('lunar_product_variants.deleted_at');
+                    })
+                    ->leftJoin('lunar_prices', function ($join) {
+                        $join->on('lunar_product_variants.id', '=', 'lunar_prices.priceable_id')
+                            ->where('lunar_prices.priceable_type', ProductVariant::class);
+                    })
+                    ->selectRaw('MAX(lunar_prices.price) as max_price')
+                    ->groupBy('lunar_products.id', 'lunar_products.brand_id', 'lunar_products.product_type_id', 'lunar_products.status', 'lunar_products.attribute_data', 'lunar_products.created_at', 'lunar_products.updated_at', 'lunar_products.deleted_at', 'lunar_collection_product.collection_id', 'lunar_collection_product.product_id', 'lunar_collection_product.position','lunar_collection_product.created_at','lunar_collection_product.updated_at')
+                    ->orderBy('max_price', 'desc');
                 break;
 
             case 'name':
-                $query->orderBy('attribute_data->name->en', 'asc');
+                // Ordenamiento por nombre en inglés
+                $query->orderByRaw('JSON_UNQUOTE(JSON_EXTRACT(attribute_data, \'$.name.value.en\')) asc');
                 break;
 
             default: // 'latest'
-                $query->orderBy('created_at', 'desc');
+                $query->orderBy('lunar_products.created_at', 'desc');
         }
     }
 
