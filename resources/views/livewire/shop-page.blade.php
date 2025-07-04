@@ -61,6 +61,7 @@
     <!-- Productos -->
     <div class="grid mt-8 gap-8 cont-sp">
         @foreach ($this->filteredProducts as $product)
+
             <x-product-card :product="$product" />
         @endforeach
     </div>
