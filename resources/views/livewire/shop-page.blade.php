@@ -1,20 +1,20 @@
-<div class="container mx-auto px-4 py-8">
+<div class="container mx-auto" >
     <!-- Filtros -->
-    <div class="bg-white p-4 rounded-lg shadow mb-6">
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+    <div class="p-4 mb-6" style="background-color: #E7E8E8;">
+        <div class="grid grid-cols-1 gap-4 cont-sp-filtros">
             <!-- Buscador -->
-            <div>
+            <div class="bg-white p-4 rounded-lg shadow">
                 <label class="block text-sm font-medium text-gray-700">Buscar</label>
                 <input type="text" wire:model.live.debounce.500ms="search" placeholder="Nombre o descripción..."
                     class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
             </div>
 
             <!-- Rango de precios -->
-            <div>
+            <div class="bg-white p-4 rounded-lg shadow">
                 <label class="block text-sm font-medium text-gray-700">
                     Precio: ${{ number_format($this->minPrice, 2) }} - ${{ number_format($this->maxPrice, 2) }}
                 </label>
-                <div class="flex space-x-4 mt-1">
+                <div class="flex space-x-4 mt-4">
                     <input type="range" wire:model.live="minPrice" min="{{ $this->priceRange['min'] }}" max="{{ $this->priceRange['max']/2 }}"
                         class="w-full">
                     <input type="range" wire:model.live="maxPrice" min="{{ $this->priceRange['max']/2 }}" max="{{ $this->priceRange['max'] }}"
@@ -23,9 +23,9 @@
             </div>
 
             <!-- Colecciones -->
-            <div>
+            <div class="bg-white p-4 rounded-lg shadow">
                 <label class="block text-sm font-medium text-gray-700">Colecciones</label>
-                <select wire:model.live="selectedCollections" multiple
+                <select wire:model.live="selectedCollections" multiple size="2"
                     class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
                     @if ($this->availableCollections)
                         @foreach ($this->availableCollections as $collection)
@@ -39,7 +39,7 @@
             </div>
 
             <!-- Ordenar por -->
-            <div>
+            <div class="bg-white p-4 rounded-lg shadow">
                 <label class="block text-sm font-medium text-gray-700">Ordenar por</label>
                 <select wire:model.live="sortBy"
                     class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
@@ -52,7 +52,7 @@
         </div>
 
         <div class="mt-4 flex justify-end">
-            <button wire:click="resetFilters" class="px-4 py-2 bg-gray-200 rounded-md hover:bg-gray-300 text-sm">
+            <button wire:click="resetFilters" class="px-4 py-2 bg-white rounded-md hover:bg-gray-300 text-sm">
                 Resetear filtros
             </button>
         </div>
