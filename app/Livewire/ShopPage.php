@@ -20,6 +20,7 @@ class ShopPage extends Component
     public $maxPrice = 100000;
     public $selectedCollections = [];
     public $sortBy = 'latest';
+    public $showFilters = false;
 
     /**
      * Return the products collection.
@@ -181,6 +182,13 @@ class ShopPage extends Component
         $this->reset(['search', 'minPrice', 'maxPrice', 'selectedCollections', 'sortBy']);
         $this->maxPrice = $this->priceRange['max'];
     }
+    /**
+     * Se ejecuta para desplegar los filtros
+     */
+    public function toggleFilters()
+{
+    $this->showFilters = !$this->showFilters;
+}
 
     /**
      * Se ejecuta cuando cambia algún filtro
