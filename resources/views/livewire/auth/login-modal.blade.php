@@ -36,6 +36,8 @@
     <div>
         @auth
     <p>Ya estás dentro, {{ Auth::user()->name }}</p>
+
+     <a href="{{ route('perfil') }}" class="mt-3 text-indigo-600 hover:underline ml-1">Ver Perfil</a>
         <button
         wire:click="logout"
         class="mt-4 w-full flex justify-center py-2 px-4 border border-transparent rounded-md  text-black font-semibold boton-login focus:outline-none focus:ring-2 focus:ring-red-500"

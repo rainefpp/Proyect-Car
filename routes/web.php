@@ -9,6 +9,7 @@ use App\Livewire\SearchPage;
 use Illuminate\Support\Facades\Route;
 use App\Livewire\FAQS;
 use App\Livewire\Auth\RegisterPage;
+use App\Livewire\Auth\PerfilPage;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,4 +37,6 @@ Route::get('checkout/success', CheckoutSuccessPage::class)->name('checkout-succe
 
 Route::get('/preguntasFrecuentes', FAQS::class)->name('faqs.page');
 require __DIR__.'/auth.php';
+
 Route::get('/register', RegisterPage::class)->name('register');
+Route::get('/perfil', PerfilPage::class)->name('perfil');

@@ -186,7 +186,11 @@ border-radius: 9px;
     grid-column: 1/3;
     margin: 0px;
   }
-}
+    .divperfildatos {
+    max-width: 834px;
+    width: 100%;
+    padding: 2%;
+}}
 @media (max-width: 834px) {
     .divfondofooter{
         justify-content: center; /* horizontal */
@@ -201,6 +205,11 @@ border-radius: 9px;
 
   .derechaproducto{
     margin-left: 1rem;
+  }
+  .divperfildatos {
+    max-width: 834px;
+    width: 100%;
+    padding: 2%;
   }
 
 }
@@ -271,18 +280,22 @@ border-radius: 9px;
     line-height: normal;
   }
   
-  p{
+  textosdetallesp{
     font-family: Inter;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
   }
-}
 
+}
+    .divperfildatos {
+        max-width: 430px;
+        width: 100%;
+        padding: 2%;
+    }
 }
 /* Estilos Login*/
-
 .registro{
   position: relative;
   height: 400px; /* o el alto que necesites */
@@ -290,7 +303,6 @@ border-radius: 9px;
   overflow: visible; /* permite que la imagen sobresalga */
   border-radius: 30px;
   padding: 20px;
-
 }
 .imagen-circular {
 position: absolute;
@@ -306,7 +318,6 @@ position: absolute;
 .formulario-relleno{
   margin-top: 0%;
 }
-
 .titulosecion{
   font-family: Inter;
   font-size: 33.18px;
@@ -319,8 +330,141 @@ position: absolute;
 .boton-login{
     background-color:  #FFA74D;
   }
-
     .boton-login:hover{
             background-color: #FF8C16 !important;        
     }
-
+/*Estilo perfil usuario*/
+.divPerfil{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: #DFE0E0;
+  padding: 2%;
+}
+.divperfildatos{
+  width: 1273px;
+  
+  border-radius: 32px;
+  background: #F7F7F7;
+  padding-top: 2%;
+  padding-left: 1%;
+  padding-right: 1%;
+}
+.h2titulos{
+  margin-left: 15px;
+  font-family: Inter;
+  font-size: 39.81px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  align-self: start;
+}
+.h3perfil{
+ font-family: Inter;
+font-size: 24px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+margin-left: 1%;
+}
+.pperfil{
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-left: 1%;
+}
+.datosperfil{
+  display: grid;
+  grid-column: 500px 386px 386px;
+}
+.tableperfil{
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 2%;
+  
+  th{
+    font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  }
+}
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.4);
+    backdrop-filter: blur(4px);
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.modal-content {
+    position: relative;
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+    padding: 2rem;
+    max-width: 400px;
+    width: 100%;
+    z-index: 60;
+}
+.boton-contraseña{
+  display: inline-flex;
+  padding: 8px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  background:  #FFA74D;
+  color: #FFF;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.boton-cancelar{
+  display: inline-flex;
+  padding: 8px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  background:  #ff0000;
+  color: #FFF;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+@media (max-width: 430px) {
+  .tableperfil {
+    width: 100%;
+    display: block;
+    overflow-x: auto;
+    font-size: 12px; /* Opcional: reduce el tamaño de fuente para mejor ajuste */
+  }
+  .tableperfil th,
+  .tableperfil td {
+    padding: 4px; /* Opcional: reduce el padding */
+    font-size: 12px;
+  }
+}
+@media(max-width:250px){
+  .divperfildatos{
+    width: 100%;
+  }
+  .datosperfil{
+    grid-template-columns: 1fr;
+  }
+}
