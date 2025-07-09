@@ -8,7 +8,9 @@ use App\Livewire\ProductPage;
 use App\Livewire\QuieneSomosPage;
 use App\Livewire\SearchPage;
 use Illuminate\Support\Facades\Route;
-use App\Livewire\ContactoPage;
+use App\Livewire\FAQS;
+use App\Livewire\Auth\RegisterPage;
+use App\Livewire\Auth\PerfilPage;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,7 +23,8 @@ use App\Livewire\ContactoPage;
 |
 */
 
-Route::get('/', Home::class);
+
+Route::get('/', Home::class)->name('/');
 
 Route::get('/collections/{slug}', CollectionPage::class)->name('collection.view');
 
@@ -33,6 +36,8 @@ Route::get('checkout', CheckoutPage::class)->name('checkout.view');
 
 Route::get('checkout/success', CheckoutSuccessPage::class)->name('checkout-success.view');
 
-Route::get('contacto', ContactoPage::class)->name('contacto-page.view');
+Route::get('/preguntasFrecuentes', FAQS::class)->name('faqs.page');
+require __DIR__.'/auth.php';
 
-Route::get('quienes-somos', QuieneSomosPage::class)->name('quiene-somos-page.view');
+Route::get('/register', RegisterPage::class)->name('register');
+Route::get('/perfil', PerfilPage::class)->name('perfil');
