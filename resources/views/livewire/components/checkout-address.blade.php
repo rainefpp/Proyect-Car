@@ -97,6 +97,7 @@
                     <select class="w-full p-4 text-sm border-2 border-gray-200 rounded-lg"
                             wire:model.live="address.country_id">
                         <option value>Select a country</option>
+
                         @foreach ($this->countries as $country)
                             <option value="{{ $country->id }}"
                                     wire:key="country_{{ $country->id }}">
