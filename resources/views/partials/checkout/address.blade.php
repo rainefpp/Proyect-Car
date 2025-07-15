@@ -2,7 +2,7 @@
       class="bg-white border border-gray-100 rounded-xl">
     <div class="flex items-center justify-between h-16 px-6 border-b border-gray-100">
         <h3 class="text-lg font-medium">
-            {{ ucfirst($type) }} Details
+            Detalles de Facturación
         </h3>
 
         @if ($type == 'shipping' && $step == $currentStep)
@@ -13,7 +13,7 @@
                        wire:model.live="shippingIsBilling" />
 
                 <span class="ml-2 text-xs font-medium">
-                    Same as billing
+                    Usar estos datos para la facturación
                 </span>
             </label>
         @endif
@@ -22,7 +22,7 @@
             <button class="px-5 py-2 text-sm font-medium text-gray-600 rounded-lg hover:bg-gray-100 hover:text-gray-700"
                     type="button"
                     wire:click.prevent="$set('currentStep', {{ $step }})">
-                Edit
+                Editar
             </button>
         @endif
     </div>
@@ -32,7 +32,7 @@
             @if ($step == $currentStep)
                 <div class="grid grid-cols-6 gap-4">
                     <x-input.group class="col-span-3"
-                                   label="First name"
+                                   label="Nombres"
                                    :errors="$errors->get($type . '.first_name')"
                                    required>
                         <x-input.text wire:model.live="{{ $type }}.first_name"
@@ -40,7 +40,7 @@
                     </x-input.group>
 
                     <x-input.group class="col-span-3"
-                                   label="Last name"
+                                   label="Apellidos"
                                    :errors="$errors->get($type . '.last_name')"
                                    required>
                         <x-input.text wire:model.live="{{ $type }}.last_name"
@@ -48,13 +48,13 @@
                     </x-input.group>
 
                     <x-input.group class="col-span-6"
-                                   label="Company name"
+                                   label="Organización"
                                    :errors="$errors->get($type . '.company_name')">
                         <x-input.text wire:model.live="{{ $type }}.company_name" />
                     </x-input.group>
 
                     <x-input.group class="col-span-6 sm:col-span-3"
-                                   label="Contact phone"
+                                   label="Número de Contacto"
                                    :errors="$errors->get($type . '.contact_phone')">
                         <x-input.text wire:model.live="{{ $type }}.contact_phone" />
                     </x-input.group>
@@ -73,7 +73,7 @@
                     </div>
 
                     <x-input.group class="col-span-3 sm:col-span-2"
-                                   label="Address line 1"
+                                   label="Direccion 1"
                                    :errors="$errors->get($type . '.line_one')"
                                    required>
                         <x-input.text wire:model.live="{{ $type }}.line_one"
@@ -81,19 +81,19 @@
                     </x-input.group>
 
                     <x-input.group class="col-span-3 sm:col-span-2"
-                                   label="Address line 2"
+                                   label="Direccion 2"
                                    :errors="$errors->get($type . '.line_two')">
                         <x-input.text wire:model.live="{{ $type }}.line_two" />
                     </x-input.group>
 
                     <x-input.group class="col-span-3 sm:col-span-2"
-                                   label="Address line 3"
+                                   label="Direccion 3"
                                    :errors="$errors->get($type . '.line_three')">
                         <x-input.text wire:model.live="{{ $type }}.line_three" />
                     </x-input.group>
 
                     <x-input.group class="col-span-3 sm:col-span-2"
-                                   label="City"
+                                   label="Ciudad"
                                    :errors="$errors->get($type . '.city')"
                                    required>
                         <x-input.text wire:model.live="{{ $type }}.city"
@@ -101,13 +101,13 @@
                     </x-input.group>
 
                     <x-input.group class="col-span-3 sm:col-span-2"
-                                   label="State / Province"
+                                   label="Region/Estado"
                                    :errors="$errors->get($type . '.state')">
                         <x-input.text wire:model.live="{{ $type }}.state" />
                     </x-input.group>
 
                     <x-input.group class="col-span-3 sm:col-span-2"
-                                   label="Postcode"
+                                   label="Codigo Postal"
                                    :errors="$errors->get($type . '.postcode')"
                                    required>
                         <x-input.text wire:model.live="{{ $type }}.postcode"
@@ -115,7 +115,7 @@
                     </x-input.group>
 
                     <x-input.group class="col-span-6"
-                                   label="Country"
+                                   label="Pais"
                                    required>
                         <select class="w-full p-3 border border-gray-200 rounded-lg sm:text-sm"
                                 wire:model.live="{{ $type }}.country_id">
@@ -135,7 +135,7 @@
                         <div class="space-y-4">
                             <div>
                                 <dt class="font-medium">
-                                    Name
+                                    Nombres
                                 </dt>
 
                                 <dd class="mt-0.5">
@@ -146,7 +146,7 @@
                             @if ($this->{$type}->company_name)
                                 <div>
                                     <dt class="font-medium">
-                                        Company
+                                        Organización
                                     </dt>
 
                                     <dd class="mt-0.5">
@@ -158,7 +158,7 @@
                             @if ($this->{$type}->contact_phone)
                                 <div>
                                     <dt class="font-medium">
-                                        Phone Number
+                                        Número de Contacto
                                     </dt>
 
                                     <dd class="mt-0.5">
@@ -181,7 +181,7 @@
 
                     <div>
                         <dt class="font-medium">
-                            Address
+                            Dirección
                         </dt>
 
                         <dd class="mt-0.5">
@@ -214,13 +214,13 @@
                             wire:target="saveAddress">
                         <span wire:loading.remove
                               wire:target="saveAddress">
-                            Save Address
+                            Guardar Dirección
                         </span>
 
                         <span wire:loading
                               wire:target="saveAddress">
                             <span class="inline-flex items-center">
-                                Saving
+                                Guardando
 
                                 <x-icon.loading />
                             </span>

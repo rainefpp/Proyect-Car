@@ -3,11 +3,12 @@
         <div class="grid grid-cols-1 gap-8 lg:grid-cols-3 lg:items-start">
             <div class="px-6 py-8 space-y-4 bg-white border border-gray-100 lg:sticky lg:top-8 rounded-xl lg:order-last">
                 <h3 class="font-medium">
-                    Order Summary
+                   Detalles De la Orden
                 </h3>
 
                 <div class="flow-root">
                     <div class="-my-4 divide-y divide-gray-100">
+                        aca estoy
                         @foreach ($cart->lines as $line)
                             <div class="flex items-center py-4"
                                  wire:key="cart_line_{{ $line->id }}">
@@ -43,11 +44,11 @@
                         @if ($this->shippingOption)
                             <div class="flex flex-wrap py-4">
                                 <dt class="w-1/2 font-medium">
-                                    {{ $this->shippingOption->getDescription() }}
+                                    Envío
                                 </dt>
 
                                 <dd class="w-1/2 text-right">
-                                    {{ $this->shippingOption->getPrice()->formatted() }}
+                                     {{ $this->shippingOption->getPrice()->formatted() }}
                                 </dd>
                             </div>
                         @endif

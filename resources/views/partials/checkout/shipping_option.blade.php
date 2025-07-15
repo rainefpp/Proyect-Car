@@ -2,14 +2,14 @@
       class="bg-white border border-gray-100 rounded-xl">
     <div class="flex items-center justify-between h-16 px-6 border-b border-gray-100">
         <h3 class="font-medium">
-            Shipping Options
+            Opciones de Envío
         </h3>
 
         @if ($currentStep > $step)
             <button class="px-5 py-2 text-sm font-medium text-gray-600 rounded-lg hover:bg-gray-100 hover:text-gray-700"
                     type="button"
                     wire:click.prevent="$set('currentStep', {{ $step }})">
-                Edit
+                Editar
             </button>
         @endif
     </div>
@@ -49,11 +49,11 @@
             @elseif($currentStep > $step && $this->shippingOption)
                 <dl class="flex flex-wrap max-w-xs text-sm">
                     <dt class="w-1/2 font-medium">
-                        {{ $this->shippingOption->getDescription() }}
+                       {!! html_entity_decode($this->shippingOption->getDescription()) !!}
                     </dt>
 
                     <dd class="w-1/2 text-right">
-                        {{ $this->shippingOption->getPrice()->formatted() }}
+                        {!! $this->shippingOption->getPrice()->formatted() !!}
                     </dd>
                 </dl>
             @endif
@@ -65,7 +65,7 @@
                             wire:key="shipping_submit_btn">
                         <span wire:loading.remove.delay
                               wire:target="saveShippingOption">
-                            Choose Shipping
+                            Elegir esta opcion
                         </span>
                         <span wire:loading.delay
                               wire:target="saveShippingOption">
