@@ -3,6 +3,7 @@
 namespace App\Livewire;
 
 use Livewire\Component;
+use Illuminate\View\View;
 
 class FAQS extends Component
 {
@@ -48,10 +49,10 @@ class FAQS extends Component
             'respuesta'=>'Puedes escribirnos a nuestro WhatsApp, correo electrónico o completar el formulario de contacto. Te responderemos lo antes posible.'
         ]
           ];
-    }  
+    }
 
 
-    public function render()
+    public function render(): View
     {
         return view('livewire.f-a-q-s');
     }

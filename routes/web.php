@@ -37,11 +37,13 @@ Route::get('checkout', CheckoutPage::class)->name('checkout.view');
 
 Route::get('checkout/success', CheckoutSuccessPage::class)->name('checkout-success.view');
 
-Route::get('/preguntasFrecuentes', FAQS::class)->name('faqs.page');
-require __DIR__.'/auth.php';
+Route::get('/preguntas-frecuentes', FAQS::class)->name('faqs.view');
 
 Route::get('quienes-somos', QuieneSomosPage::class)->name('quiene-somos-page.view');
 
 Route::get('shop', ShopPage::class)->name('shop-page.view');
+
+require __DIR__ . '/auth.php';
+
 Route::get('/register', RegisterPage::class)->name('register');
 Route::get('/perfil', PerfilPage::class)->name('perfil');
