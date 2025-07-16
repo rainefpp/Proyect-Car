@@ -12,7 +12,6 @@
             <nav class="hidden lg:gap-4 lg:flex lg:ml-8 mx-2">
                     <a class="text-sm font-medium transition hover:opacity-75" href=""> Inicio </a>
                     <a class="text-sm font-medium transition hover:opacity-75" href=""> Tienda </a>
-                    <a class="text-sm font-medium transition hover:opacity-75" href=""> Carrito </a>
                     <a class="text-sm font-medium transition hover:opacity-75" href=""> Mi Cuenta </a>
                     <a class="text-sm font-medium transition hover:opacity-75" href=""> Quiénes Somos </a>
                     <a class="text-sm font-medium transition hover:opacity-75" href="{{ route('faqs.view') }}"> Preguntas Frecuentes </a>
