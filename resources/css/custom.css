@@ -377,7 +377,7 @@
     .cont-sp {
         grid-template-columns: repeat(4, minmax(0, 1fr));
     }
-    .cont-sp-filtros{
+    .cont-sp-filtros {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
@@ -397,67 +397,68 @@
 }
  ----------------------- */
 /*estilos FAQS*/
-.interfont{
+.interfont {
     font-family: Inter;
 }
 .fondo1 {
-    background-color: #E7E8E8;
+    background-color: #e7e8e8;
 }
-.tamañobannerfaq{
-     height: 580px;
-       background-position: center;  
-       background-repeat: no-repeat; 
+.tamañobannerfaq {
+    height: 580px;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-@media (max-width:836px) {
-        .tamañobannerfaq{
+@media (max-width: 836px) {
+    .tamañobannerfaq {
         height: 432px;
-        background-size: cover;  }
+        background-size: cover;
+    }
 }
-.divpregunta{
-  display: flex;
-  flex-direction: column;       
-  width: 100%;
-  max-width: 800px;             
-  margin: 0 auto;              
-  padding: 20px;
-  gap: 10px;
-  background-color: white;
-  border-radius: 8px;      
+.divpregunta {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    gap: 10px;
+    background-color: white;
+    border-radius: 8px;
 }
 /*estilos footer*/
-    .divalto{
-        margin-top:5%;
-        height: 255px;
-    }
-    .marginizquierda{
-        margin-left:5%;
-    }
-    .marginderecha{
-      margin-right:2%
-    }
-    .tamañoimg{
-        height:25%;
-    }
-    .ulfooter {
-  list-style-type: disc; /* Puntos antes de los elementos */
-  padding-left: 20px; /* Un poco de espacio para el marcador */
+.divalto {
+    margin-top: 5%;
+    height: 255px;
+}
+.marginizquierda {
+    margin-left: 5%;
+}
+.marginderecha {
+    margin-right: 2%;
+}
+.tamañoimg {
+    height: 25%;
+}
+.ulfooter {
+    list-style-type: disc; /* Puntos antes de los elementos */
+    padding-left: 20px; /* Un poco de espacio para el marcador */
 }
 .lifooter {
-  color: black; /* Color por defecto */
-  transition: color 0.3s ease; /* Transición suave para el cambio de color */
-  margin-top: 3%;  /* Márgen en la parte superior */
-  margin-bottom: 1%;  /* Márgen en la parte inferior */
+    color: black; /* Color por defecto */
+    transition: color 0.3s ease; /* Transición suave para el cambio de color */
+    margin-top: 3%; /* Márgen en la parte superior */
+    margin-bottom: 1%; /* Márgen en la parte inferior */
 }
 .lifooter:hover {
-  color: gray; /* Color cuando el mouse pasa sobre el elemento */
+    color: gray; /* Color cuando el mouse pasa sobre el elemento */
 }
-.divfondofooter{
-  background-size: cover;
-  background-position: center;  
-  background-repeat: no-repeat;
-  display: flex;
-    width:100%;
+.divfondofooter {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    width: 100%;
     height: 315px;
     padding: 32px;
     justify-content: center;
@@ -467,226 +468,225 @@
     flex-shrink: 0;
     flex-wrap: wrap;
 }
-.divbordes{
-  border: 1px solid black;
+.divbordes {
+    border: 1px solid black;
 }
-.div1footer{
-  max-width:454px;
+.div1footer {
+    max-width: 454px;
 }
-.div2footer{
-  min-width: 210px;
+.div2footer {
+    min-width: 210px;
 }
-.div3footer{
-  max-width:230px;
+.div3footer {
+    max-width: 230px;
 }
-.div4footer{
+.div4footer {
     min-height: 255px;
 }
 
 /*estilos pagina producto*/
 
-.contenedorproductos{
-display: grid;
-grid-template-columns: 250px 1fr 1fr;
-}
-
-.imagenVertical{
-  width: 50%;
-  margin-bottom: 12px;
-  margin-left: 25px;
-}
-
-.imagenprincipal{
-  margin-right: 100px;
-  margin-left: -100px;
-}
-.derechaproducto{
-  margin-left: -65px;
-}
-.etiquetaDescipcion{
-  font-family: Inter;
-  font-size: 27px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  background-color: #FFA74D;
-  padding: 10px;
-  color: #E7E8E8;
-  border-radius:9px 9px 0px 0px;
-  max-width: 179px;
-}
-.textosdescripcion{
-  h1{
-    color: #000;
-    font-family: Inter;
-    font-size: 39.81px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-  }
-  p{
-    color: #000;
-    font-family: Inter;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-  }
-}
-.textosdetalles{
-margin-left: 22px;
-margin-right: 22px;
-margin-top: 22px;
-width: 95%;
-border-radius: 9px;
-
-  h2{
-    font-family: Inter;
-    font-size: 39.81px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-  }
-
-  p{
-    font-family: Inter;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    margin-top: 1rem;
-    margin-bottom: 2%;
-  }
-  h3{
-    font-family: Inter;
-    font-size: 33.18px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-  }
-  li{
-      list-style-type: disc; /* Puntito delante */
-      font-weight: normal;     /* Negrita */
-      margin-bottom: 2px;    /* Espacio hacia abajo como un renglón */
-      margin-left: 3%;
-  }
-
-}
-@media (max-width:1128px) {
-    .div1footer{
-         max-width:227px;
-    } 
-  .contenedorproductos{
-    grid-template-columns: 200px 600px;
-    grid-template-rows: 589px 409px;
-  }
-  .derechaproducto{
-    grid-column: 1/3;
-    margin: 0px;
-  }
-    .divperfildatos {
-    max-width: 834px;
-    width: 100%;
-    padding: 2%;
-}}
-@media (max-width: 834px) {
-    .divfondofooter{
-        justify-content: center; /* horizontal */
-        align-items: center;  
-    }
-  .div1footer,.div2footer,.div3footer,.div4footer{
-    min-width: 365px;
-  }
-  .imagenprincipal{
-    margin-left: 1rem;
-  }
-
-  .derechaproducto{
-    margin-left: 1rem;
-  }
-  .divperfildatos {
-    max-width: 834px;
-    width: 100%;
-    padding: 2%;
-  }
-
-}
-@media (max-width:430px){
-
-  body{
-    margin: 0px;
-    background-color:FFA74D ;
-  }
-  .imagenprincipal{
-    margin-right: 0px;
-    width:100%;
-    max-width: 100%;
-    object-fit: contain;
-    margin: 0px;
-  }
-  .contenedorproductos{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    grid-template-rows: 378px 163px 541px;
-  }
-  .divimagenprincipal{
-    grid-column: 1/3;
-    grid-row: 1/2;
-  }
-  .divgaleriavertical{
-    grid-row: 2/3;
-    grid-column: 1/2;
+.contenedorproductos {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    width: 354px;
-    height: 161px;
-    justify-self: stretch;
-  }
-  .derechaproducto{
-    grid-column: 1/2;
-    grid-row: 3/4;
-  }
-  .divimagenprincipal{
-    grid-column: 1/2;
-    grid-row: 1/2 ;
-  }
-.imagenVertical{
-  display: block;
-  margin-top: 32px;
-  gap: 30px;
-  width: 95%;
-  object-fit: contain;
+    grid-template-columns: 250px 1fr 1fr;
 }
-.textosdescripcion{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100%;
-}
-.estrellas{
-  display: flex;
-  justify-content: center; /* centra las estrellas en la línea horizontal */
-  margin-top: 16px;
-}
-.textosdetalles{
 
-  h2{
+.imagenVertical {
+    width: 50%;
+    margin-bottom: 12px;
+    margin-left: 25px;
+}
+
+.imagenprincipal {
+    margin-right: 100px;
+    margin-left: -100px;
+}
+.derechaproducto {
+    margin-left: -65px;
+}
+.etiquetaDescipcion {
     font-family: Inter;
-    font-size: 28px;
+    font-size: 27px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-  }
-  
-  textosdetallesp{
-    font-family: Inter;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-  }
-
+    background-color: #ffa74d;
+    padding: 10px;
+    color: #e7e8e8;
+    border-radius: 9px 9px 0px 0px;
+    max-width: 179px;
 }
+.textosdescripcion {
+    h1 {
+        color: #000;
+        font-family: Inter;
+        font-size: 39.81px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+    p {
+        color: #000;
+        font-family: Inter;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+}
+.textosdetalles {
+    margin-left: 22px;
+    margin-right: 22px;
+    margin-top: 22px;
+    width: 95%;
+    border-radius: 9px;
+
+    h2 {
+        font-family: Inter;
+        font-size: 39.81px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    p {
+        font-family: Inter;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin-top: 1rem;
+        margin-bottom: 2%;
+    }
+    h3 {
+        font-family: Inter;
+        font-size: 33.18px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+    li {
+        list-style-type: disc; /* Puntito delante */
+        font-weight: normal; /* Negrita */
+        margin-bottom: 2px; /* Espacio hacia abajo como un renglón */
+        margin-left: 3%;
+    }
+}
+@media (max-width: 1128px) {
+    .div1footer {
+        max-width: 227px;
+    }
+    .contenedorproductos {
+        grid-template-columns: 200px 600px;
+        grid-template-rows: 589px 409px;
+    }
+    .derechaproducto {
+        grid-column: 1/3;
+        margin: 0px;
+    }
+    .divperfildatos {
+        max-width: 834px;
+        width: 100%;
+        padding: 2%;
+    }
+}
+@media (max-width: 834px) {
+    .divfondofooter {
+        justify-content: center; /* horizontal */
+        align-items: center;
+    }
+    .div1footer,
+    .div2footer,
+    .div3footer,
+    .div4footer {
+        min-width: 365px;
+    }
+    .imagenprincipal {
+        margin-left: 1rem;
+    }
+
+    .derechaproducto {
+        margin-left: 1rem;
+    }
+    .divperfildatos {
+        max-width: 834px;
+        width: 100%;
+        padding: 2%;
+    }
+}
+@media (max-width: 430px) {
+    body {
+        margin: 0px;
+        background-color: FFA74D;
+    }
+    .imagenprincipal {
+        margin-right: 0px;
+        width: 100%;
+        max-width: 100%;
+        object-fit: contain;
+        margin: 0px;
+    }
+    .contenedorproductos {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 378px 163px 541px;
+    }
+    .divimagenprincipal {
+        grid-column: 1/3;
+        grid-row: 1/2;
+    }
+    .divgaleriavertical {
+        grid-row: 2/3;
+        grid-column: 1/2;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        width: 354px;
+        height: 161px;
+        justify-self: stretch;
+    }
+    .derechaproducto {
+        grid-column: 1/2;
+        grid-row: 3/4;
+    }
+    .divimagenprincipal {
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+    .imagenVertical {
+        display: block;
+        margin-top: 32px;
+        gap: 30px;
+        width: 95%;
+        object-fit: contain;
+    }
+    .textosdescripcion {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+    }
+    .estrellas {
+        display: flex;
+        justify-content: center; /* centra las estrellas en la línea horizontal */
+        margin-top: 16px;
+    }
+    .textosdetalles {
+        h2 {
+            font-family: Inter;
+            font-size: 28px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
+
+        textosdetallesp {
+            font-family: Inter;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+    }
     .divperfildatos {
         max-width: 430px;
         width: 100%;
@@ -694,111 +694,111 @@ border-radius: 9px;
     }
 }
 /* Estilos Login*/
-.registro{
-  position: relative;
-  height: 400px; /* o el alto que necesites */
-  background: #DFE0E0;
-  overflow: visible; /* permite que la imagen sobresalga */
-  border-radius: 30px;
-  padding: 20px;
+.registro {
+    position: relative;
+    height: 400px; /* o el alto que necesites */
+    background: #dfe0e0;
+    overflow: visible; /* permite que la imagen sobresalga */
+    border-radius: 30px;
+    padding: 20px;
 }
 .imagen-circular {
-position: absolute;
-  top: -80px; /* ajusta este valor según cuánto quieras que sobresalga */
-  left: 50%;
-  width: 90px; /* ancho de la imagen */
-  height: 90px; /* alto de la imagen */
-  transform: translateX(-50%);
-  background-color: white;
-  border-radius: 50%;
-  object-fit: cover;
+    position: absolute;
+    top: -80px; /* ajusta este valor según cuánto quieras que sobresalga */
+    left: 50%;
+    width: 90px; /* ancho de la imagen */
+    height: 90px; /* alto de la imagen */
+    transform: translateX(-50%);
+    background-color: white;
+    border-radius: 50%;
+    object-fit: cover;
 }
-.formulario-relleno{
-  margin-top: 0%;
+.formulario-relleno {
+    margin-top: 0%;
 }
-.titulosecion{
-  font-family: Inter;
-  font-size: 33.18px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  color: #000000;
-  text-align: center;
-}
-.boton-login{
-    background-color:  #FFA74D;
-  }
-    .boton-login:hover{
-            background-color: #FF8C16 !important;        
-    }
-/*Estilo perfil usuario*/
-.divPerfil{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  background-color: #DFE0E0;
-  padding: 2%;
-}
-.divperfildatos{
-  width: 1273px;
-  
-  border-radius: 32px;
-  background: #F7F7F7;
-  padding-top: 2%;
-  padding-left: 1%;
-  padding-right: 1%;
-}
-.h2titulos{
-  margin-left: 15px;
-  font-family: Inter;
-  font-size: 39.81px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  align-self: start;
-}
-.h3perfil{
- font-family: Inter;
-font-size: 24px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
-margin-left: 1%;
-}
-.pperfil{
-  font-family: Inter;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  margin-left: 1%;
-}
-.datosperfil{
-  display: grid;
-  grid-column: 500px 386px 386px;
-}
-.tableperfil{
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 2%;
-  
-  th{
+.titulosecion {
     font-family: Inter;
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  }
+    font-size: 33.18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    color: #000000;
+    text-align: center;
+}
+.boton-login {
+    background-color: #ffa74d;
+}
+.boton-login:hover {
+    background-color: #ff8c16 !important;
+}
+/*Estilo perfil usuario*/
+.divPerfil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: #dfe0e0;
+    padding: 2%;
+}
+.divperfildatos {
+    width: 1273px;
+
+    border-radius: 32px;
+    background: #f7f7f7;
+    padding-top: 2%;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+.h2titulos {
+    margin-left: 15px;
+    font-family: Inter;
+    font-size: 39.81px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    align-self: start;
+}
+.h3perfil {
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-left: 1%;
+}
+.pperfil {
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-left: 1%;
+}
+.datosperfil {
+    display: grid;
+    grid-column: 500px 386px 386px;
+}
+.tableperfil {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2%;
+
+    th {
+        font-family: Inter;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
 }
 .modal-overlay {
     position: fixed;
     inset: 0;
     width: 100vw;
     height: 100vh;
-    background: rgba(0,0,0,0.4);
+    background: rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(4px);
     z-index: 50;
     display: flex;
@@ -809,60 +809,60 @@ margin-left: 1%;
     position: relative;
     background: #fff;
     border-radius: 1rem;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
     padding: 2rem;
     max-width: 400px;
     width: 100%;
     z-index: 60;
 }
-.boton-contraseña{
-  display: inline-flex;
-  padding: 8px 16px;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  border-radius: 10px;
-  background:  #FFA74D;
-  color: #FFF;
-  font-family: Inter;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
+.boton-contraseña {
+    display: inline-flex;
+    padding: 8px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    background: #ffa74d;
+    color: #fff;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
 }
-.boton-cancelar{
-  display: inline-flex;
-  padding: 8px 16px;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  border-radius: 10px;
-  background:  #ff0000;
-  color: #FFF;
-  font-family: Inter;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
+.boton-cancelar {
+    display: inline-flex;
+    padding: 8px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    background: #ff0000;
+    color: #fff;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
 }
 @media (max-width: 430px) {
-  .tableperfil {
-    width: 100%;
-    display: block;
-    overflow-x: auto;
-    font-size: 12px; /* Opcional: reduce el tamaño de fuente para mejor ajuste */
-  }
-  .tableperfil th,
-  .tableperfil td {
-    padding: 4px; /* Opcional: reduce el padding */
-    font-size: 12px;
-  }
+    .tableperfil {
+        width: 100%;
+        display: block;
+        overflow-x: auto;
+        font-size: 12px; /* Opcional: reduce el tamaño de fuente para mejor ajuste */
+    }
+    .tableperfil th,
+    .tableperfil td {
+        padding: 4px; /* Opcional: reduce el padding */
+        font-size: 12px;
+    }
 }
-@media(max-width:250px){
-  .divperfildatos{
-    width: 100%;
-  }
-  .datosperfil{
-    grid-template-columns: 1fr;
-  }
+@media (max-width: 250px) {
+    .divperfildatos {
+        width: 100%;
+    }
+    .datosperfil {
+        grid-template-columns: 1fr;
+    }
 }
