@@ -1,26 +1,26 @@
-<header class="relative border-b border-gray-100">
-    <div class="flex items-center justify-between h-16 px-4 mx-auto max-w-screen-2xl sm:px-6 lg:px-8">
-        <div class="flex items-center">
+<header class="relative border-b border-gray-100 bg-white shadow-sm">
+    <div class="flex items-center justify-between h-16 px-4 py-8 mx-auto max-w-screen-2xl sm:px-6 lg:px-8">
+        <div class="flex items-center h-16">
             <a class="flex items-center flex-shrink-0"
                href="{{ url('/') }}"
                wire:navigate
             >
                 <span class="sr-only">Home</span>
-
-                <x-brand.logo class="w-auto h-6 text-indigo-600" />
+                <img class="" style="width:72%;" src="{{ asset('images/logos/carzone-logo.png')}}" alt="Logo"></img>   
             </a>
 
-            <nav class="hidden lg:gap-4 lg:flex lg:ml-8">
-                @foreach ($this->collections as $collection)
-                    <a class="text-sm font-medium transition hover:opacity-75"
-                       href="{{ route('collection.view', $collection->defaultUrl->slug) }}"
-                       wire:navigate
-                    >
-                        {{ $collection->translateAttribute('name') }}
-                    </a>
-                @endforeach
+            <nav class="hidden lg:gap-4 lg:flex lg:ml-8 mx-2">      
+                    <a class="text-sm font-medium transition hover:opacity-75" href=""> Inicio </a>
+                    <a class="text-sm font-medium transition hover:opacity-75" href=""> Tienda </a>
+                    <a class="text-sm font-medium transition hover:opacity-75" href=""> Carrito </a>
+                    <a class="text-sm font-medium transition hover:opacity-75" href=""> Mi Cuenta </a>
+                    <a class="text-sm font-medium transition hover:opacity-75" href=""> Quiénes Somos </a>
+                    <a class="text-sm font-medium transition hover:opacity-75" href="{{ route('faqs.page') }}"> Preguntas Frecuentes </a>
+                    <a class="text-sm font-medium transition hover:opacity-75" href=""> Contacto </a>
             </nav>
-        </div>
+            <a class="text-sm text-white font-medium transition hover:opacity-75 rounded-lg px-8 py-1" style="background: var(--Secundary-500, #FFA74D); margin-left:10px;" href=""> Comprar Aquí </a>
+        </div>  
+              
 
         <div class="flex items-center justify-between flex-1 ml-4 lg:justify-end">
             <x-header.search class="max-w-sm mr-4" />
@@ -46,27 +46,45 @@
                             </svg>
                         </span>
                     </button>
+                      <div class="flex items-center -mr-4 sm:-mr-6 lg:mr-0">
+                          @livewire("auth.login-modal")
+                    </div>   
 
                     <div x-cloak
                          x-transition
                          x-show="mobileMenu"
                          class="absolute right-0 top-auto z-50 w-screen p-4 sm:max-w-xs">
                         <ul x-on:click.away="mobileMenu = false"
-                            class="p-6 space-y-4 bg-white border border-gray-100 shadow-xl rounded-xl">
-                            @foreach ($this->collections as $collection)
+                            class="p-6 space-y-4 bg-white border border-gray-100 shadow-xl rounded-xl">                       
                                 <li>
-                                    <a class="text-sm font-medium"
-                                       href="{{ route('collection.view', $collection->defaultUrl->slug) }}"
-                                       wire:navigate
-                                    >
-                                        {{ $collection->translateAttribute('name') }}
-                                    </a>
+                                    <a class="text-sm font-medium transition hover:opacity-75" href=""> Inicio </a>
                                 </li>
-                            @endforeach
+                                <li>
+                                    <a class="text-sm font-medium transition hover:opacity-75" href=""> Tienda </a>
+                                </li>
+                                <li>
+                                    <a class="text-sm font-medium transition hover:opacity-75" href=""> Carrito </a>
+                                </li>
+                                <li>
+                                    <a class="text-sm font-medium transition hover:opacity-75" href=""> Mi Cuenta </a>
+                                </li>
+                                <li>
+                                    <a class="text-sm font-medium transition hover:opacity-75" href=""> Quiénes Somos </a>
+                                </li>
+                                <li>
+                                    <a class="text-sm font-medium transition hover:opacity-75" href=""> Preguntas Frecuentes </a>
+                                </li>
+                                <li>
+                                    <a class="text-sm font-medium transition hover:opacity-75" href=""> Comprar Aquí </a>
+                                </li>
                         </ul>
+                        
                     </div>
                 </div>
             </div>
+            
         </div>
+    </div>
+    <div>
     </div>
 </header>
