@@ -7,10 +7,10 @@
                         <div class="aspect-w-1 aspect-h-1 "
                              wire:key="image_{{ $image->id }}">
                             <img loading="lazy "
-                                 class="object-cover rounded-xl object-cover imagenVertical"
+                                 class="object-cover rounded-xl imagenVertical"
                                  src="{{ $image->getUrl('small') }}"
                                  alt="{{ $this->product->translateAttribute('name') }}" />
-                        </div>                      
+                        </div>
                     @endforeach
     </div>
     <!-- Div 2: sin estilo especial -->
@@ -29,7 +29,7 @@
      <div class="flex items-center justify-between  textosdescripcion">
                     <h1 class="text-xl font-bold">
                         {{ $this->product->translateAttribute('name') }}
-                    </h1>  
+                    </h1>
                 </div>
                 <p class="mt-1 text-sm text-gray-500">
                     {{ $this->variant->sku }}
@@ -52,28 +52,28 @@
                     <img src="{{ asset('images/productos/engine.svg') }}" alt="motor" class="">
                       <h1 class="text-sm interfont ml-1 mt-1">
                       {{$this->product->translateAttribute('motor-cilindrada')}}cc
-                      </h1> 
+                      </h1>
                 </div>
                  <div>
                     <img src="{{ asset('images/productos/speed.svg') }}" alt="velocidad" class="ml-4">
                     <h1 class="text-sm interfont">
                     {{$this->product->translateAttribute('max-speed')}}
-                    </h1> 
+                    </h1>
                 </div>
                  <div>
                     <img src="{{ asset('images/productos/fuel.svg') }}" alt="fuel" class="ml-3">
                       <h1 class="text-sm interfont">
                     {{$this->product->translateAttribute('combustible')}}
-                    </h1> 
-                  
+                    </h1>
+
                 </div>
                  <div>
                 <img src="{{ asset('images/productos/tranmission.svg') }}" alt="transmission" class="ml-4">
                  <h1 class="text-sm interfont">
                     {{$this->product->translateAttribute('transmision')}}
                     </h1>
-                </div>                                                
-            </div>                 
+                </div>
+            </div>
                 <x-product-price class="mt-8 font-bold text-indigo-700 estrellas"
                 :variant="$this->variant" />
                  <form class="mt-4">
@@ -112,24 +112,25 @@
                         @endforeach
                     </div>
 
-                    <div class="max-w-xs mt-8">
+
+    </div>
+        @endif
+        <div class="max-w-xs mt-8">
                         <livewire:components.add-to-cart :purchasable="$this->variant"
                                                          :wire:key="$this->variant->id">
                     </div>
                 </form>
-    </div>
-        @endif
 
  </div>
  <!-- boton pagar-->
- 
+
   </div>
- 
+
 <div class="w-full bg-green-300 p-8 fondo1 textosdetalles">
     <div class="etiquetaDescipcion">
         <h4>Descripción</h4>
-    </div>   
+    </div>
         {!!$this->product->translateAttribute('descripcio-larga')!!}
 
 </div>
-</section>    
+</section>
