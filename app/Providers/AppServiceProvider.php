@@ -17,13 +17,13 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        // Reemplaza el panel original por tu versión personalizada
-        $this->app->bind(
-            LunarPanel::class,
-            CustomLunarPanel::class
-        );
+        LunarPanel::panel(
+            fn($panel) => $panel->plugins([
+                new ShippingPlugin,
+            ])
+        )
+            ->register();
 
-        CustomLunarPanel::register();
 
     }
 
