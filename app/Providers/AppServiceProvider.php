@@ -8,6 +8,7 @@ use Lunar\Admin\Support\Facades\LunarPanel;
 use Lunar\Base\ShippingModifiers;
 use Lunar\Shipping\ShippingPlugin;
 use Livewire\Livewire;
+use App\Admin\CustomLunarPanel;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -16,12 +17,14 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        LunarPanel::panel(
-            fn ($panel) => $panel->plugins([
-                new ShippingPlugin,
-            ])
-        )
-            ->register();
+        // Reemplaza el panel original por tu versión personalizada
+        $this->app->bind(
+            LunarPanel::class,
+            CustomLunarPanel::class
+        );
+
+        CustomLunarPanel::register();
+
     }
 
     /**

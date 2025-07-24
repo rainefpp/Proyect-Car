@@ -170,7 +170,6 @@ return [
         App\Providers\Filament\DanielPanelProvider::class,
         App\Providers\RouteServiceProvider::class,
         App\Providers\VoltServiceProvider::class,
-        App\Providers\LunarExtensionsServiceProvider::class,
     ])->toArray(),
 
     /*
